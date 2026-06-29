@@ -1,0 +1,32 @@
+.button {
+  background-color: #ffffff;
+  color: #000000;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+
+  &.size:hover,
+  &.color:hover {
+    background-color: #000000;
+    color: #dbdbdb;
+  }
+}
+
+.size {
+  width: 52px;
+  height: 52px;
+}
+
+.color {
+  width: 105px;
+  height: 52px;
+}
+
+.trash {
+  width: 202px;
+  height: 64px;
+  background-color: #000000;
+  color: #dbdbdb;
+  font-size: 22px;
+}
