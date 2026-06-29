@@ -1,8 +1,13 @@
-import styles from './Input.module.scss';
+import styles from './style.module.scss';
+import cn from 'classnames';
 
-const Input = ({ className, ...props }) => {
+const Input = ({ variant, ...props }) => {
   return (
-    <input {...props} type="text" className={`${styles.Input} ${className}`} />
+    <input
+      {...props}
+      type="text"
+      className={cn(styles.input, styles[variant])}
+    />
   );
 };
 
