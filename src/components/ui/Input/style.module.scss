@@ -1,0 +1,18 @@
+.input {
+  max-width: 200px;
+  height: 32px;
+  padding: 0 16px;
+  border: 1px solid #000;
+  border-radius: 8px;
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  outline: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
