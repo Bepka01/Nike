@@ -1,4 +1,4 @@
-import styles from './style.module.scss';
+import style from './style.module.scss';
 import cn from 'classnames';
 
 const Input = ({ variant, ...props }) => {
@@ -6,7 +6,7 @@ const Input = ({ variant, ...props }) => {
     <input
       {...props}
       type="text"
-      className={cn(styles.input, styles[variant])}
+      className={cn(style.input, style[variant])}
     />
   );
 };
