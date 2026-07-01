@@ -1,0 +1,34 @@
+@use '../../../styles/variables' as *;
+
+.button {
+  background-color: $color-white;
+  color: $color-black;
+  border: $border-width solid $color-border;
+  border-radius: $border-radius-sm;
+  font-size: $font-size-base;
+  transition: all $transition-fast;
+
+  &.size:hover,
+  &.color:hover {
+    background-color: $color-black;
+    color: $color-border;
+  }
+}
+
+.size {
+  width: 52px;
+  height: 52px;
+}
+
+.color {
+  width: 105px;
+  height: 52px;
+}
+
+.trash {
+  width: 202px;
+  height: 64px;
+  background-color: $color-black;
+  color: $color-border;
+  font-size: $font-size-lg;
+}
