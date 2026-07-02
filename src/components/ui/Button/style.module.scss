@@ -1,17 +1,17 @@
 @use '../../../styles/variables' as *;
 
 .button {
-  background-color: $color-white;
-  color: $color-black;
-  border: $border-width solid $color-border;
+  background-color: $white;
+  color: $black;
+  border: 1px solid $light-gray;
   border-radius: $border-radius-sm;
   font-size: $font-size-base;
   transition: all $transition-fast;
 
   &.size:hover,
   &.color:hover {
-    background-color: $color-black;
-    color: $color-border;
+    background-color: $black;
+    color: $light-gray;
   }
 }
 
@@ -28,7 +28,7 @@
 .trash {
   width: 202px;
   height: 64px;
-  background-color: $color-black;
-  color: $color-border;
+  background-color: $black;
+  color: $light-gray;
   font-size: $font-size-lg;
 }
