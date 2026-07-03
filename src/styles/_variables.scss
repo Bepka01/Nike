@@ -1,20 +1,16 @@
-// ====================
-// Colors
-// ====================
+$white: #ffffff;
+$black: #000000;
 
-$color-white: #ffffff;
-$color-black: #000000;
-$color-gray: #9ca3af;
-$color-border: #dbdbdb;
+$gray: #9ca3af;
+$light-gray: #d9d9d9;
 
-$border-width: 1px;
-$border-radius-sm: 8px;
+$border-radius-sm: 10px;
 
 $font-size-base: 16px;
-$font-size-lg: 22px;
+$font-size-lg: 20px;
+
+$transition-fast: 0.3s;
 
 $input-max-width: 200px;
 $input-height: 32px;
 $input-padding-x: 16px;
-
-$transition-fast: 0.3s ease;

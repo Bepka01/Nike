@@ -5,11 +5,11 @@
   height: $input-height;
   padding: 0 $input-padding-x;
 
-  border: $border-width solid $color-black;
+  border: 1px solid $black;
   border-radius: $border-radius-sm;
 
-  background-color: $color-white;
-  color: $color-black;
+  background-color: $white;
+  color: $black;
 
   font-size: $font-size-base;
   outline: none;
@@ -17,8 +17,8 @@
   transition:
     border-color $transition-fast,
     box-shadow $transition-fast;
-}
 
-.input::placeholder {
-  color: $color-gray;
+  &::placeholder {
+    color: $gray;
+  }
 }
