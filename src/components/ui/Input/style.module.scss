@@ -1,0 +1,23 @@
+@use '../../../styles/variables' as *;
+
+.input {
+  width: $input-width;
+  max-width: $input-max-width;
+  height: $input-height;
+  padding: 0 $input-padding-x;
+
+  border: $input-border-width solid $black;
+  border-radius: $border-radius-sm;
+
+  background-color: $white;
+  color: $black;
+
+  font-size: $font-size-base;
+  outline: none;
+
+  transition: border-color $transition-fast;
+
+  &::placeholder {
+    color: $light-gray;
+  }
+}
