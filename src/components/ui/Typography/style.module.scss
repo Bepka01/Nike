@@ -5,32 +5,40 @@
   color: inherit;
 }
 
-.h1 {
+.aeroport {
+  font-family: 'Aeroport', sans-serif;
+}
+
+.inter {
+  font-family: 'Inter', sans-serif;
+}
+
+.title-product {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.btn {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.weight-text {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.title-some {
   font-size: 32px;
   font-weight: 700;
   line-height: 1.2;
 }
 
-.h2 {
-  font-size: 24px;
-  font-weight: 700;
+.text {
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1.3;
-}
-
-.h3 {
-  font-size: $font-size-lg;
-  font-weight: 600;
-  line-height: 1.3;
-}
-
-.body {
-  font-size: $font-size-base;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.caption {
-  font-size: $font-size-xs;
-  font-weight: 400;
-  line-height: 1.4;
 }
