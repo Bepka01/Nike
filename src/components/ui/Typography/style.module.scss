@@ -1,45 +1,47 @@
 @use '../../../styles/variables' as *;
+@use '../../../styles/typography' as typo;
 
 .typography {
   margin: 0;
   color: inherit;
-  font-family: $font-family-base;
 }
 
 .aeroport {
-  font-family: 'Aeroport', sans-serif;
+  @include typo.aeroport;
 }
 
-.inter {
-  font-family: 'Inter', sans-serif;
+.regular {
+  @include typo.regular;
 }
 
-.title-product {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1.2;
+.menu {
+  @include typo.menu;
 }
 
-.btn {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.3;
+.title {
+  @include typo.title;
 }
 
-.weight-text {
-  font-size: 20px;
-  font-weight: 800;
-  line-height: 1.3;
+.section-title {
+  @include typo.section-title;
 }
 
-.title-some {
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1.2;
+.product-price {
+  @include typo.product-price;
 }
 
-.text {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.3;
+.small-title {
+  @include typo.small-title;
+}
+
+.history-product-title {
+  @include typo.history-product-title;
+}
+
+.viewed-product-price {
+  @include typo.viewed-product-price;
+}
+
+.small-text {
+  @include typo.small-text;
 }

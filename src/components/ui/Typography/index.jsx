@@ -3,9 +3,9 @@ import cn from 'classnames';
 
 const Typography = ({
   tag: Tag = 'p',
-  fontFamily,
+  fontFamily = 'aeroport',
   variant,
-  className = 'aeroport',
+  className,
   children,
 }) => {
   return (
