@@ -19,13 +19,6 @@
   font-style: normal;
 }
 
-@mixin font-regular {
-  font-weight: 400;
-}
-
-@mixin font-bold {
-  font-weight: 700;
-}
 
 @mixin regular {
   @include font-regular;
