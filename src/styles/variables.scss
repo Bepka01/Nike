@@ -2,16 +2,23 @@ $white: #ffffff;
 $black: #000000;
 $light-gray: #d9d9d9;
 
+$font-family-base: 'Inter', sans-serif;
+
 $border-radius-sm: 10px;
 
 $font-size-base: 16px;
 $font-size-lg: 20px;
+$font-size-xs: 14px;
 
 $transition-fast: 0.3s;
 
-// Input
 $input-width: 100%;
 $input-max-width: 200px;
 $input-height: 40px;
 $input-padding-x: 16px;
 $input-border-width: 1px;
+
+$font-family-inter: 'Inter', sans-serif;
+$font-family-aeroport: 'Aeroport', sans-serif;
+
+$font-family-base: $font-family-inter;

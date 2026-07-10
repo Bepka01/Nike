@@ -1,0 +1,47 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/typography' as typo;
+
+.typography {
+  margin: 0;
+  color: inherit;
+}
+
+.aeroport {
+  @include typo.aeroport;
+}
+
+.regular {
+  @include typo.regular;
+}
+
+.menu {
+  @include typo.menu;
+}
+
+.title {
+  @include typo.title;
+}
+
+.section-title {
+  @include typo.section-title;
+}
+
+.product-price {
+  @include typo.product-price;
+}
+
+.small-title {
+  @include typo.small-title;
+}
+
+.history-product-title {
+  @include typo.history-product-title;
+}
+
+.viewed-product-price {
+  @include typo.viewed-product-price;
+}
+
+.small-text {
+  @include typo.small-text;
+}
