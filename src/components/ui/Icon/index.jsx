@@ -4,6 +4,7 @@ import Arrow from '../../../assets/icons/arrow.svg?react';
 import Vk from '../../../assets/icons/vk.svg?react';
 import Inst from '../../../assets/icons/instagram.svg?react';
 import FaceBook from '../../../assets/icons/facebook.svg?react';
+import Nike from '../../../assets/icons/logonike.svg?react';
 
 const icons = {
   glass: Glass,
@@ -12,6 +13,7 @@ const icons = {
   vk: Vk,
   inst: Inst,
   facebook: FaceBook,
+  nike: Nike,
 };
 
 const Icon = ({ name, color = 'black', ...props }) => {
