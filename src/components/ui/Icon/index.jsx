@@ -1,9 +1,9 @@
 import Glass from '../../../assets/icons/glass.svg?react';
-import Trash from '../../../assets/icons/trash (2).svg?react';
+import Trash from '../../../assets/icons/trash.svg?react';
 import Arrow from '../../../assets/icons/arrow.svg?react';
 import Vk from '../../../assets/icons/vk.svg?react';
 import Inst from '../../../assets/icons/instagram.svg?react';
-import FaceBook from '../../../assets/icons/facebook 1 (1).svg?react';
+import FaceBook from '../../../assets/icons/facebook.svg?react';
 
 const icons = {
   glass: Glass,
