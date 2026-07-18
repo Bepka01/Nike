@@ -1,4 +1,5 @@
 @use '../../styles/variables.scss' as *;
+
 .header {
   width: 100%;
   height: 115px;
@@ -8,15 +9,33 @@
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
 }
+
 .burgerMenu {
   display: none;
   flex-direction: column;
   gap: 5.7px;
+  cursor: pointer;
+
+  .burgerLine {
+    width: 24px;
+    height: 2.3px;
+    background-color: $black;
+    transition: all 0.3s ease;
+  }
 }
-.burgerLine {
-  width: 24px;
-  height: 3px;
-  background-color: $black;
+
+.burgerOpen {
+  .burgerLine:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .burgerLine:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burgerLine:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }
 
 .headerLeft {
@@ -75,6 +94,7 @@
     height: 64px;
     padding: 16px;
   }
+
   .burgerMenu {
     display: flex;
   }
@@ -97,5 +117,22 @@
 
   .burger {
     display: block;
+  }
+
+  .burgerNavigation {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 10px;
+
+    background: $white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+    .headerMenuMobile {
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
   }
 }
