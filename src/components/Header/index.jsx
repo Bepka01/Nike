@@ -2,6 +2,8 @@ import { useState } from 'react';
 import Icon from '../ui/Icon';
 import Typography from '../ui/Typography';
 import style from './style.module.scss';
+import MenuItem from './MenuItem';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -21,73 +23,42 @@ const Header = () => {
         <div className={style.headerLeft}>
           <Icon name="nike" color="black" className={style.logoDesktop} />
 
-          <div
+          <Icon
+            name={activeBurger ? 'burgerClose' : 'burger'}
             onClick={() => {
               setBurger(!activeBurger);
-              console.log(activeBurger);
             }}
-            className={`${style.burgerMenu} ${activeBurger ? style.burgerOpen : ''}`}
-          >
-            <div className={style.burgerLine}></div>
-            <div className={style.burgerLine}></div>
-            <div className={style.burgerLine}></div>
-          </div>
+            className={`${style.burger} ${activeBurger ? style.open : ''}`}
+          />
         </div>
 
         <div className={style.headerCenter}>
           <Icon name="nike" color="black" className={style.logoMobile} />
 
           <nav className={style.navigation}>
-            <div className={style.menuItem}>
-              <Typography
-                variant="header-menu"
-                onClick={() => toggleMenu('clothes')}
-              >
-                Одежда
-              </Typography>
+            <MenuItem
+              isOpen="clothes"
+              title="Одежда"
+              items={['Кроссовки', 'Футболки', 'Шорты']}
+              activeMenu={activeMenu}
+              toggleMenu={toggleMenu}
+            />
 
-              {activeMenu === 'clothes' && (
-                <div className={style.dropdown}>
-                  <p>Кроссовки</p>
-                  <p>Футболки</p>
-                  <p>Шорты</p>
-                </div>
-              )}
-            </div>
+            <MenuItem
+              isOpen="accessories"
+              title="Аксессуары"
+              items={['Рюкзаки', 'Носки', 'Кепки']}
+              activeMenu={activeMenu}
+              toggleMenu={toggleMenu}
+            />
 
-            <div className={style.menuItem}>
-              <Typography
-                variant="header-menu"
-                onClick={() => toggleMenu('accessories')}
-              >
-                Аксессуары
-              </Typography>
-
-              {activeMenu === 'accessories' && (
-                <div className={style.dropdown}>
-                  <p>Рюкзаки</p>
-                  <p>Носки</p>
-                  <p>Кепки</p>
-                </div>
-              )}
-            </div>
-
-            <div className={style.menuItem}>
-              <Typography
-                variant="header-menu"
-                onClick={() => toggleMenu('collections')}
-              >
-                Коллекции
-              </Typography>
-
-              {activeMenu === 'collections' && (
-                <div className={style.dropdown}>
-                  <p>Jordan</p>
-                  <p>Air Max</p>
-                  <p>Running</p>
-                </div>
-              )}
-            </div>
+            <MenuItem
+              isOpen="collections"
+              title="Коллекции"
+              items={['Jordan', 'Air Max', 'Running']}
+              activeMenu={activeMenu}
+              toggleMenu={toggleMenu}
+            />
           </nav>
         </div>
 
@@ -99,11 +70,31 @@ const Header = () => {
 
       {activeBurger && (
         <div className={style.burgerNavigation}>
-          <Typography className={style.headerMenuMobile} variant="header-menu">
-            Одежда
-          </Typography>
-          <Typography variant="header-menu">Аксессуары</Typography>
-          <Typography variant="header-menu">Коллекции</Typography>
+          <MenuItem
+            className={style.burgerMenuItem}
+            isOpen="clothes"
+            title="Одежда"
+            items={['Кроссовки', 'Футболки', 'Шорты']}
+            activeMenu={activeMenu}
+            toggleMenu={toggleMenu}
+          />
+          <MenuItem
+            className={style.burgerMenuItem}
+            isOpen="accessories"
+            title="Аксессуары"
+            items={['Рюкзаки', 'Носки', 'Кепки']}
+            activeMenu={activeMenu}
+            toggleMenu={toggleMenu}
+          />
+
+          <MenuItem
+            className={style.burgerMenuItem}
+            isOpen="collections"
+            title="Коллекции"
+            items={['Jordan', 'Air Max', 'Running']}
+            activeMenu={activeMenu}
+            toggleMenu={toggleMenu}
+          />
         </div>
       )}
     </>

@@ -5,6 +5,8 @@ import Vk from '../../../assets/icons/vk.svg?react';
 import Inst from '../../../assets/icons/instagram.svg?react';
 import FaceBook from '../../../assets/icons/facebook.svg?react';
 import Nike from '../../../assets/icons/logonike.svg?react';
+import Burger from '../../../assets/icons/burger.svg?react';
+import BurgerClose from '../../../assets/icons/burger-close.svg?react';
 
 const icons = {
   glass: Glass,
@@ -14,6 +16,8 @@ const icons = {
   inst: Inst,
   facebook: FaceBook,
   nike: Nike,
+  burger: Burger,
+  burgerClose: BurgerClose,
 };
 
 const Icon = ({ name, color = 'black', ...props }) => {

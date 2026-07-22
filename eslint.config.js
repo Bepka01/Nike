@@ -28,6 +28,8 @@ export default defineConfig([
       },
     },
     rules: {
+      'no-console': 'warn',
+
       'unused-imports/no-unused-imports': 'error',
 
       'unused-imports/no-unused-vars': [

@@ -24,18 +24,16 @@
   }
 }
 
-.burgerOpen {
-  .burgerLine:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
+.burger {
+  display: block;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
 
-  .burgerLine:nth-child(2) {
-    opacity: 0;
-  }
-
-  .burgerLine:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
+.open {
+  transform: rotate(90deg);
+  opacity: 0.8;
 }
 
 .headerLeft {
