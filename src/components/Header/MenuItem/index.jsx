@@ -2,6 +2,7 @@ import style from './style.module.scss';
 import Typography from '../../ui/Typography';
 import { Link } from 'react-router-dom';
 import cn from 'classnames';
+import Icon from '../../ui/Icon';
 
 const MenuItem = ({
   title,
@@ -14,15 +15,15 @@ const MenuItem = ({
   return (
     <div className={style.menuItem}>
       <Typography variant="header-menu" onClick={() => toggleMenu(isOpen)}>
-        {title}
+        {title} <Icon name="drowDownArrow" />
       </Typography>
 
       {activeMenu === isOpen && (
         <div className={cn(style.dropDown, className)}>
           {items.map((item) => {
             return (
-              <Link key={item} to={`/${item.toLowerCase()}`}>
-                <p>{item}</p>
+              <Link key={item.path} to={`/${item.path}`}>
+                <p>{item.title}</p>
               </Link>
             );
           })}

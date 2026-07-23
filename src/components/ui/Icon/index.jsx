@@ -7,6 +7,7 @@ import FaceBook from '../../../assets/icons/facebook.svg?react';
 import Nike from '../../../assets/icons/logonike.svg?react';
 import Burger from '../../../assets/icons/burger.svg?react';
 import BurgerClose from '../../../assets/icons/burger-close.svg?react';
+import DropDownArrow from '../../../assets/icons/DropDownArrow.svg?react';
 
 const icons = {
   glass: Glass,
@@ -18,6 +19,7 @@ const icons = {
   nike: Nike,
   burger: Burger,
   burgerClose: BurgerClose,
+  dropDownArrow: DropDownArrow,
 };
 
 const Icon = ({ name, color = 'black', ...props }) => {

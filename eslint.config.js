@@ -28,7 +28,7 @@ export default defineConfig([
       },
     },
     rules: {
-      'no-console': 'warn',
+      'no-console': 'error',
 
       'unused-imports/no-unused-imports': 'error',
 
