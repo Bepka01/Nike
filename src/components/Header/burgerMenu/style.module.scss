@@ -1,0 +1,29 @@
+@use '../../../styles/variables.scss' as *;
+
+.burgerNavigation {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  padding: 10px;
+
+  background: $white;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+
+  position: absolute;
+  top: 64px;
+  left: 0;
+
+  z-index: 100;
+}
+
+.burgerMenuItem {
+  top: 0;
+  left: calc(100% + 10px);
+}
+
+.headerMenuMobile {
+  font-size: 18px;
+  transition: color 0.3s ease;
+}

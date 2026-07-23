@@ -19,67 +19,62 @@
   font-style: normal;
 }
 
-
 @mixin regular {
-  @include font-regular;
-
   font-size: 1.25rem;
   line-height: 1.875rem;
 }
 
 @mixin menu {
-  @include font-regular;
-
   font-size: 1.25rem;
   line-height: 1.25rem;
 }
 
 @mixin title {
-  @include font-bold;
-
   font-size: 2.5rem;
   line-height: 3rem;
+  font-weight: 700;
 }
 
 @mixin section-title {
-  @include font-bold;
-
   font-size: 2rem;
   line-height: 2.4rem;
+  font-weight: 700;
 }
 
 @mixin product-price {
-  @include font-bold;
-
   font-size: 1.5rem;
   line-height: 1.95rem;
+  font-weight: 700;
 }
 
 @mixin small-title {
-  @include font-bold;
-
   font-size: 1.5rem;
   line-height: 1.8rem;
+  font-weight: 700;
 }
 
 @mixin history-product-title {
-  @include font-regular;
-
   font-size: 1rem;
   line-height: 1.3rem;
 }
 
 @mixin viewed-product-price {
-  @include font-bold;
-
   font-size: 1rem;
   line-height: 1.3rem;
+  font-weight: 700;
   text-align: center;
 }
 
 @mixin small-text {
-  @include font-regular;
-
   font-size: 0.75rem;
   line-height: 0.975rem;
+}
+
+@mixin header-menu {
+  font-family: 'Aeroport', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 100%;
+  letter-spacing: 0;
 }
