@@ -40,3 +40,29 @@
   top: 0;
   left: calc(100% + 10px);
 }
+
+.arrow {
+  transition: transform 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.arrowOpen {
+  transition: transform 0.3s ease;
+  transform: rotate(360deg);
+}
+
+.burgerDropDown {
+  position: static;
+
+  min-width: auto;
+  width: 100%;
+
+  margin-top: 10px;
+  margin-left: 15px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}

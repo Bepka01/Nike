@@ -15,7 +15,13 @@ const MenuItem = ({
   return (
     <div className={style.menuItem}>
       <Typography variant="header-menu" onClick={() => toggleMenu(isOpen)}>
-        {title} <Icon name="drowDownArrow" />
+        <span>{title}</span>
+        <Icon
+          name="dropDownArrow"
+          className={cn(style.arrow, {
+            [style.arrowOpen]: activeMenu === isOpen,
+          })}
+        />
       </Typography>
 
       {activeMenu === isOpen && (

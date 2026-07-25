@@ -71,6 +71,9 @@
 }
 
 @mixin header-menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
   font-family: 'Aeroport', sans-serif;
   font-style: normal;
   font-weight: 400;
