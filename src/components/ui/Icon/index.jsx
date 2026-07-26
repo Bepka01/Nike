@@ -6,8 +6,8 @@ import Inst from '../../../assets/icons/instagram.svg?react';
 import FaceBook from '../../../assets/icons/facebook.svg?react';
 import Nike from '../../../assets/icons/logonike.svg?react';
 import Burger from '../../../assets/icons/burger.svg?react';
-import BurgerClose from '../../../assets/icons/burger-close.svg?react';
-import DropDownArrow from '../../../assets/icons/DropDownArrow.svg?react';
+import BurgerClose from '../../../assets/icons/burgerClose.svg?react';
+import DropDownArrow from '../../../assets/icons/dropDownArrow.svg?react';
 
 const icons = {
   glass: Glass,

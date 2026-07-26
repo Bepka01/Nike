@@ -93,26 +93,14 @@
     padding: 16px;
   }
 
-  .burgerMenu {
-    display: flex;
-  }
-
-  .navigation {
-    display: none;
-  }
-
-  .logoDesktop {
-    display: none;
-  }
-
+  .burgerMenu,
+  .navigation,
+  .logoDesktop,
   .search {
     display: none;
   }
 
-  .logoMobile {
-    display: block;
-  }
-
+  .logoMobile,
   .burger {
     display: block;
   }

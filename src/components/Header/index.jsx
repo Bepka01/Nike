@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Icon from '../ui/Icon';
 
+import { menu } from '../../constants';
+
 import style from './style.module.scss';
 import MenuItem from './MenuItem';
 
@@ -38,41 +40,18 @@ const Header = () => {
           <Icon name="nike" color="black" className={style.logoMobile} />
 
           <nav className={style.navigation}>
-            <MenuItem
-              isOpen="clothes"
-              title="Одежда"
-              items={[
-                { title: 'Кроссовки', path: 'Sneakers' },
-                { title: 'Футболки', path: 'T-shirts' },
-                { title: 'Шорты', path: 'shorts' },
-              ]}
-              activeMenu={activeMenu}
-              toggleMenu={toggleMenu}
-            />
-
-            <MenuItem
-              isOpen="accessories"
-              title="Аксессуары"
-              items={[
-                { title: 'Рюкзаки', path: 'backpacks' },
-                { title: 'Носки', path: 'socks' },
-                { title: 'Кепки', path: 'caps' },
-              ]}
-              activeMenu={activeMenu}
-              toggleMenu={toggleMenu}
-            />
-
-            <MenuItem
-              isOpen="collections"
-              title="Коллекции"
-              items={[
-                { title: 'Jordan', path: 'jordan' },
-                { title: 'Air Max', path: 'air-max' },
-                { title: 'Running', path: 'running' },
-              ]}
-              activeMenu={activeMenu}
-              toggleMenu={toggleMenu}
-            />
+            {menu.map((item) => {
+              return (
+                <MenuItem
+                  key={item.id}
+                  isOpen={item.id}
+                  title={item.title}
+                  items={item.items}
+                  activeMenu={activeMenu}
+                  toggleMenu={toggleMenu}
+                />
+              );
+            })}
           </nav>
         </div>
 
@@ -85,7 +64,11 @@ const Header = () => {
       </header>
 
       {activeBurger && (
-        <BurgerMenu toggleMenu={toggleMenu} activeMenu={activeMenu} />
+        <BurgerMenu
+          toggleMenu={toggleMenu}
+          activeMenu={activeMenu}
+          menu={menu}
+        />
       )}
     </>
   );
