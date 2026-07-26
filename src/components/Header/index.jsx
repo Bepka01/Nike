@@ -5,6 +5,7 @@ import style from './style.module.scss';
 import MenuItem from './MenuItem';
 
 import BurgerMenu from './burgerMenu';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -77,7 +78,9 @@ const Header = () => {
 
         <div className={style.headerRight}>
           <Icon name="glass" className={style.search} />
-          <Icon name="trash" />
+          <Link to="/trash">
+            <Icon name="trash" />
+          </Link>
         </div>
       </header>
 
