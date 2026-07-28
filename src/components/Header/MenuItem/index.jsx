@@ -21,7 +21,11 @@ const MenuItem = ({ item, activeMenu, toggleMenu, className }) => {
       {activeMenu === item.id && (
         <div className={cn(style.dropDown, className)}>
           {item.items.map((link) => (
-            <Link key={link.path} to={`/${link.path}`}>
+            <Link
+              onClick={() => toggleMenu(item.id)}
+              key={link.path}
+              to={`/${item.path}/${link.path}`}
+            >
               <p>{link.title}</p>
             </Link>
           ))}

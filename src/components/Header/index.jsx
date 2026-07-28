@@ -6,7 +6,7 @@ import { menu } from '../../constants.js';
 import style from './style.module.scss';
 import MenuItem from './MenuItem';
 
-import BurgerMenu from './burgerMenu';
+import BurgerMenu from './BurgerMenu/index.jsx';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
@@ -25,7 +25,9 @@ const Header = () => {
     <>
       <header className={style.header}>
         <div className={style.headerLeft}>
-          <Icon name="nike" color="black" className={style.logoDesktop} />
+          <Link to="/">
+            <Icon name="nike" color="black" className={style.logoDesktop} />
+          </Link>
 
           <Icon
             name={activeBurger ? 'burgerClose' : 'burger'}
@@ -37,7 +39,9 @@ const Header = () => {
         </div>
 
         <div className={style.headerCenter}>
-          <Icon name="nike" color="black" className={style.logoMobile} />
+          <Link to="/">
+            <Icon name="nike" color="black" className={style.logoMobile} />
+          </Link>
 
           <nav className={style.navigation}>
             {menu.map((item) => (

@@ -29,7 +29,12 @@ const BurgerMenu = ({ activeMenu, toggleMenu, menu }) => {
               {mapItem.items.map((item) => (
                 <li key={item.path} className={style.item}>
                   <Typography variant="header-menu">
-                    <Link to={item.path}>{item.title}</Link>
+                    <Link
+                      onClick={() => toggleMenu(item.id)}
+                      to={`/${mapItem.path}/${item.path}`}
+                    >
+                      {item.title}
+                    </Link>
                   </Typography>
                 </li>
               ))}
