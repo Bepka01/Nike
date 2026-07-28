@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Icon from '../ui/Icon';
 
-import { menu } from '../../constants';
+import { menu } from '../../constants.js';
 
 import style from './style.module.scss';
 import MenuItem from './MenuItem';
@@ -40,18 +40,14 @@ const Header = () => {
           <Icon name="nike" color="black" className={style.logoMobile} />
 
           <nav className={style.navigation}>
-            {menu.map((item) => {
-              return (
-                <MenuItem
-                  key={item.id}
-                  isOpen={item.id}
-                  title={item.title}
-                  items={item.items}
-                  activeMenu={activeMenu}
-                  toggleMenu={toggleMenu}
-                />
-              );
-            })}
+            {menu.map((item) => (
+              <MenuItem
+                key={item.id}
+                item={item}
+                activeMenu={activeMenu}
+                toggleMenu={toggleMenu}
+              />
+            ))}
           </nav>
         </div>
 
