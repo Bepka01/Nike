@@ -45,3 +45,6 @@
 .small-text {
   @include typo.small-text;
 }
+.header-menu {
+  @include typo.header-menu;
+}

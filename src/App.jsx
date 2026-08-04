@@ -1,5 +1,14 @@
+import Header from './components/Header';
+import AppRoutes from './routes/AppRoutes';
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <Header />
+
+      <AppRoutes />
+    </div>
+  );
 }
 
 export default App;

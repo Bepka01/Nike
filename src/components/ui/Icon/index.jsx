@@ -4,6 +4,10 @@ import Arrow from '../../../assets/icons/arrow.svg?react';
 import Vk from '../../../assets/icons/vk.svg?react';
 import Inst from '../../../assets/icons/instagram.svg?react';
 import FaceBook from '../../../assets/icons/facebook.svg?react';
+import Nike from '../../../assets/icons/logonike.svg?react';
+import Burger from '../../../assets/icons/burger.svg?react';
+import BurgerClose from '../../../assets/icons/burgerClose.svg?react';
+import DropDownArrow from '../../../assets/icons/dropDownArrow.svg?react';
 
 const icons = {
   glass: Glass,
@@ -12,6 +16,10 @@ const icons = {
   vk: Vk,
   inst: Inst,
   facebook: FaceBook,
+  nike: Nike,
+  burger: Burger,
+  burgerClose: BurgerClose,
+  dropDownArrow: DropDownArrow,
 };
 
 const Icon = ({ name, color = 'black', ...props }) => {

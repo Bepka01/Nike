@@ -1,0 +1,50 @@
+@use '../../../styles/variables' as *;
+
+.burgerNavigation {
+  width: 100%;
+}
+
+.burgerMenu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: $white;
+  }
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+.list {
+  margin: 0;
+  padding: 0 0 0 16px;
+  list-style: none;
+}
+
+.item {
+  padding: 10px 0;
+
+  a {
+    display: block;
+    color: $black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 16px;
+  }
+}
