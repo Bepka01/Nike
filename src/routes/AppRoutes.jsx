@@ -2,9 +2,9 @@ import { Routes, Route } from 'react-router-dom';
 
 import { ROUTES } from './routes';
 
-import Main from '../pages/main';
-import Trash from '../pages/trash';
-import Catalog from '../pages/catalog';
+import Main from '../pages/main/index';
+import Trash from '../pages/trash/index';
+import Catalog from '../pages/catalog/index';
 
 const AppRoutes = () => {
   return (
