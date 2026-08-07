@@ -1,0 +1,11 @@
+@use '../../../styles/variables.scss' as *;
+.footerInfo {
+  display: flex;
+  color: $text-gray;
+  justify-content: space-between;
+  margin-top: 120px;
+  .links {
+    display: flex;
+    gap: 40px;
+  }
+}

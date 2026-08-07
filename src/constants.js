@@ -30,3 +30,43 @@ export const menu = [
     ],
   },
 ];
+
+export const footerColumns = [
+  {
+    title: 'Информация',
+    path: 'information',
+    links: [
+      { title: 'Доставка', path: 'delivery' },
+      { title: 'Оплата', path: 'payment' },
+      { title: 'Возврат', path: 'return' },
+      { title: 'О нас', path: 'about' },
+      { title: 'Контакты', path: 'contacts' },
+    ],
+  },
+  {
+    title: 'О Nike',
+    path: 'nike',
+    links: [
+      { title: 'Новости', path: 'news' },
+      { title: 'Карьера', path: 'career' },
+      { title: 'Инвесторам', path: 'investors' },
+      {
+        title: 'Забота об окружающей среде',
+        path: 'sustainability',
+      },
+    ],
+  },
+  {
+    title: 'Информация сайта',
+    path: 'info',
+    links: [
+      { title: 'Каталог', path: 'catalog' },
+      { title: 'Условия использования', path: 'terms' },
+      { title: 'Условия продажи', path: 'sales' },
+      {
+        title: 'Конфиденциальность и файлы cookie',
+        path: 'privacy',
+      },
+    ],
+  },
+];
