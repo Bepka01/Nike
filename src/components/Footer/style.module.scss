@@ -22,3 +22,30 @@
     gap: 16px;
   }
 }
+
+@media (max-width: 786px) {
+  .footer {
+    padding: 50px 40px;
+    .footerContent {
+      flex-direction: column;
+    }
+
+    .footerColumns {
+      margin-bottom: 40px;
+      gap: 75px;
+    }
+
+    .footerContent,
+    .footerColumns {
+      width: 100%;
+      border-bottom: 1px solid $text-gray;
+      padding-bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footerColumns {
+    flex-direction: column;
+  }
+}

@@ -4,8 +4,38 @@
   color: $text-gray;
   justify-content: space-between;
   margin-top: 120px;
+
+  .infoTitle {
+    font-size: 12px;
+  }
+
   .links {
     display: flex;
-    gap: 40px;
+    gap: 30px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footerInfo {
+    margin-top: 30px;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    .links {
+      white-space: nowrap;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .footerInfo {
+    margin-top: 55px;
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
   }
 }

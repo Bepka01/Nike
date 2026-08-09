@@ -4,7 +4,7 @@ import style from './style.module.scss';
 const FooterInfo = () => {
   return (
     <div className={style.footerInfo}>
-      <p>© Nike, Inc., 2020. Все права защищены.</p>
+      <p className={style.infoTitle}>© Nike, Inc., 2020. Все права защищены.</p>
 
       <div className={style.links}>
         <Link to="/catalog">Каталог</Link>
