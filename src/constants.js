@@ -82,21 +82,3 @@ export const footerColumns = [
   },
 ];
 
-export const footerBottomLinks = [
-  {
-    title: 'Каталог',
-    path: 'catalog',
-  },
-  {
-    title: 'Условия использования',
-    path: 'terms',
-  },
-  {
-    title: 'Условия продажи',
-    path: 'sales',
-  },
-  {
-    title: 'Конфиденциальность и файлы cookie',
-    path: 'privacy',
-  },
-];
