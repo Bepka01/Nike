@@ -1,0 +1,51 @@
+@use '../../styles/variables.scss' as *;
+
+.footer {
+  padding: 85px;
+  background-color: $gray;
+
+  .footerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .footerColumns {
+    display: flex;
+    gap: 150px;
+  }
+
+  .footerIcons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 786px) {
+  .footer {
+    padding: 50px 40px;
+    .footerContent {
+      flex-direction: column;
+    }
+
+    .footerColumns {
+      margin-bottom: 40px;
+      gap: 75px;
+    }
+
+    .footerContent,
+    .footerColumns {
+      width: 100%;
+      border-bottom: 1px solid $text-gray;
+      padding-bottom: 35px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .footerColumns {
+    flex-direction: column;
+  }
+}
