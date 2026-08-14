@@ -1,5 +1,5 @@
 import style from './style.module.scss';
-import FooterColumn from './FooterColumnё';
+import FooterColumn from './FooterColumn';
 import FooterIcons from './FooterIcons';
 import { footerColumns } from '../../constants';
 import FooterInfo from './FooterInfo';
