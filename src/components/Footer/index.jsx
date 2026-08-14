@@ -1,5 +1,5 @@
 import style from './style.module.scss';
-import FooterColumns from './FooterColumns';
+import FooterColumn from './FooterColumnё';
 import FooterIcons from './FooterIcons';
 import { footerColumns } from '../../constants';
 import FooterInfo from './FooterInfo';
@@ -11,7 +11,7 @@ const Footer = () => {
         <div className={style.footerColumns}>
           {footerColumns.map((column) => {
             return (
-              <FooterColumns
+              <FooterColumn
                 key={column.title}
                 title={column.title}
                 links={column.links}

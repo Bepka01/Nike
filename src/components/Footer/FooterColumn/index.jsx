@@ -1,7 +1,7 @@
 import style from './style.module.scss';
 import { Link } from 'react-router-dom';
 
-const FooterColumns = ({ title, links, path }) => {
+const FooterColumn = ({ title, links, path }) => {
   return (
     <div className={style.column}>
       <h2 className={style.columnTitle}>{title}</h2>
@@ -20,4 +20,4 @@ const FooterColumns = ({ title, links, path }) => {
   );
 };
 
-export default FooterColumns;
+export default FooterColumn;
