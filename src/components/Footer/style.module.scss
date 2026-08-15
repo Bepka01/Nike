@@ -1,54 +1,70 @@
 @use '../../styles/variables.scss' as *;
 
 .footer {
-  padding: 85px;
+  width: 100%;
   background-color: $gray;
+  box-sizing: border-box;
+  padding: 60px 0 0;
 
   .footerContent {
+    width: 100%;
+    max-width: 1159px;
+    margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
   }
 
   .footerColumns {
     display: flex;
     gap: 150px;
   }
+}
 
-  .footerIcons {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+@media (max-width: 1200px) {
+  .footer {
+    .footerContent {
+      padding: 0 50px;
+    }
   }
 }
 
 @media (max-width: 786px) {
   .footer {
-    padding: 20px;
+    padding: 40px 0 0;
+
     .footerContent {
+      padding: 0 20px;
       flex-direction: column;
     }
 
     .footerColumns {
-      margin-bottom: 40px;
+      width: 100%;
       gap: 75px;
+      margin-bottom: 35px;
+      padding-bottom: 35px;
+      border-bottom: 1px solid $text-gray;
     }
 
-    .footerContent,
-    .footerColumns {
+    .footerContent::after {
+      content: '';
       width: 100%;
       border-bottom: 1px solid $text-gray;
-      padding-bottom: 35px;
+      margin-top: 35px;
     }
   }
 }
 
 @media (max-width: 500px) {
   .footer {
-    padding: 20px;
+    .footerContent {
+      padding: 0 15px;
+    }
+
     .footerColumns {
       flex-direction: column;
+      gap: 35px;
     }
   }
 }
