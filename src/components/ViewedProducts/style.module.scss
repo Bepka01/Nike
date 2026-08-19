@@ -4,6 +4,8 @@
   margin: 0 auto;
   padding: 85px 20px;
   box-sizing: border-box;
+  min-width: 0;
+  overflow: hidden;
 
   .viewedProductsHeader {
     display: flex;
@@ -26,6 +28,7 @@
       align-items: center;
       justify-content: center;
       transform-origin: center;
+      cursor: pointer;
     }
 
     .left {
@@ -36,49 +39,22 @@
       transform: rotate(270deg) translateX(0.5px);
     }
   }
-
-  .productsContainer {
-    display: flex;
-    gap: 50px;
-    width: 100%;
-    overflow: hidden;
-  }
-}
-
-@media (max-width: 1100px) {
-  .viewedProducts {
-    .productsContainer {
-      gap: 35px;
-    }
-  }
 }
 
 @media (max-width: 900px) {
   .viewedProducts {
     padding: 70px 20px;
-
-    .productsContainer {
-      gap: 30px;
-    }
   }
 }
 
 @media (max-width: 600px) {
   .viewedProducts {
     padding: 50px 20px;
-
-    .productsContainer {
-      gap: 25px;
-    }
   }
 }
 
 @media (max-width: 500px) {
   .viewedProducts {
     padding: 40px 15px;
-
-    .productsContainer {
-      gap: 20px;
-    }
   }
 }

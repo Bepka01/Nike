@@ -2,54 +2,57 @@ import Typography from '../ui/Typography/index';
 import ViewedProductCard from './viewedProductCard';
 import style from './style.module.scss';
 import Icon from '../ui/Icon/index';
-import { useState } from 'react';
+import Slider from '../Slider';
+import { SwiperSlide } from 'swiper/react';
+import { useRef } from 'react';
 
 const ViewedProducts = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => prev + 1);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => prev - 1);
-  };
-
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   return (
     <div className={style.viewedProducts}>
       <div className={style.viewedProductsHeader}>
         <Typography variant="small-title">История просмотров</Typography>
 
         <div className={style.navigation}>
-          <Icon
-            onClick={handlePrev}
-            name="dropDownArrow"
-            className={style.left}
-          />
-          <Icon
-            onClick={handleNext}
-            name="dropDownArrow"
-            className={style.right}
-          />
+          <Icon ref={prevRef} name="dropDownArrow" className={style.left} />
+          <Icon ref={nextRef} name="dropDownArrow" className={style.right} />
         </div>
       </div>
 
-      <div className={style.productsContainer}>
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-        <ViewedProductCard />
-      </div>
+      <Slider prevEl={prevRef} nextEl={nextRef}>
+        <SwiperSlide>
+          <ViewedProductCard />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ViewedProductCard />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ViewedProductCard />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ViewedProductCard />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ViewedProductCard />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ViewedProductCard />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ViewedProductCard />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <ViewedProductCard />
+        </SwiperSlide>
+      </Slider>
     </div>
   );
 };
