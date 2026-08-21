@@ -5,7 +5,7 @@ import Icon from '../ui/Icon/index';
 import Slider from '../Slider';
 import { SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
-import { viewedProducts } from '../../mock';
+import { viewedProducts } from './mock';
 
 const ViewedProducts = () => {
   const prevRef = useRef(null);

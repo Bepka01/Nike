@@ -1,7 +1,7 @@
-import image1 from './assets/img/viewedCard1.png';
-import image2 from './assets/img/viewedCard2.png';
-import image3 from './assets/img/viewedCard3.png';
-import image4 from './assets/img/viewedCard4.png';
+import image1 from '../../assets/img/viewedCard1.png';
+import image2 from '../../assets/img/viewedCard2.png';
+import image3 from '../../assets/img/viewedCard3.png';
+import image4 from '../../assets/img/viewedCard4.png';
 
 export const viewedProducts = [
   {
