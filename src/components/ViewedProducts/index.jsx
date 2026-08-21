@@ -5,6 +5,7 @@ import Icon from '../ui/Icon/index';
 import Slider from '../Slider';
 import { SwiperSlide } from 'swiper/react';
 import { useRef } from 'react';
+import { viewedProducts } from '../../mock';
 
 const ViewedProducts = () => {
   const prevRef = useRef(null);
@@ -21,37 +22,18 @@ const ViewedProducts = () => {
       </div>
 
       <Slider prevEl={prevRef} nextEl={nextRef}>
-        <SwiperSlide>
-          <ViewedProductCard />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ViewedProductCard />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ViewedProductCard />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ViewedProductCard />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ViewedProductCard />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ViewedProductCard />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ViewedProductCard />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <ViewedProductCard />
-        </SwiperSlide>
+        {viewedProducts.map((card) => {
+          return (
+            <SwiperSlide>
+              <ViewedProductCard
+                img={card.image}
+                title={card.title}
+                price={card.price}
+                key={card.id}
+              />
+            </SwiperSlide>
+          );
+        })}
       </Slider>
     </div>
   );

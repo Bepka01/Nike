@@ -1,13 +1,12 @@
 import style from './style.module.scss';
-import photo from '../../../assets/img/viewedCard.png';
 
-const ViewedProductCard = () => {
+const ViewedProductCard = ({ img, title, price }) => {
   return (
     <div className={style.viewedProductCard}>
-      <img src={photo} alt="foto" />
+      <img src={img} alt={title} />
       <div className={style.aboutCard}>
-        <p className={style.titleCard}>Nike Air Max 270 React ENG</p>
-        <p className={style.PriceCard}>2320 ₽</p>
+        <p className={style.titleCard}>{title}</p>
+        <p className={style.PriceCard}>{price}</p>
       </div>
     </div>
   );

@@ -5,6 +5,18 @@ import style from './style.module.scss';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
+const breakpointsForSliderViewed = {
+  600: {
+    slidesPerView: 2,
+  },
+  900: {
+    slidesPerView: 3,
+  },
+  1100: {
+    slidesPerView: 4,
+  },
+};
+
 const Slider = ({ children, prevEl, nextEl }) => {
   return (
     <Swiper
@@ -12,17 +24,7 @@ const Slider = ({ children, prevEl, nextEl }) => {
       modules={[Navigation]}
       spaceBetween={20}
       slidesPerView={1}
-      breakpoints={{
-        600: {
-          slidesPerView: 2,
-        },
-        900: {
-          slidesPerView: 3,
-        },
-        1100: {
-          slidesPerView: 4,
-        },
-      }}
+      breakpoints={breakpointsForSliderViewed}
       navigation={{
         prevEl: prevEl.current,
         nextEl: nextEl.current,
