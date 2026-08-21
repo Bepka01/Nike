@@ -22,11 +22,11 @@ const icons = {
   dropDownArrow: DropDownArrow,
 };
 
-const Icon = ({ name, color = 'black', ...props }) => {
+const Icon = ({ name, color = 'black', ...props }, ref) => {
   const ComponentIcon = icons[name];
 
   if (!ComponentIcon) return null;
-  return <ComponentIcon style={{ color }} {...props} />;
+  return <ComponentIcon ref={ref} style={{ color }} {...props} />;
 };
 
 export default Icon;
