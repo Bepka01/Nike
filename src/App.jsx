@@ -3,6 +3,7 @@ import AppRoutes from './routes/AppRoutes';
 import Footer from './components/Footer';
 import ViewedProducts from './components/ViewedProducts';
 import ProductGallery from './components/ProductGallery';
+import ProductInfo from './components/ProductInfo';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <AppRoutes />
       <ProductGallery />
+      <ProductInfo />
       <ViewedProducts />
       <Footer />
     </div>

@@ -48,3 +48,6 @@
 .header-menu {
   @include typo.header-menu;
 }
+.bold {
+  font-weight: 700;
+}
