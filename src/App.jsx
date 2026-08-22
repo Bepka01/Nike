@@ -9,8 +9,7 @@ function App() {
     <div>
       <Header />
       <AppRoutes />
-      <Product />
-      <ViewedProducts />
+
       <Footer />
     </div>
   );
