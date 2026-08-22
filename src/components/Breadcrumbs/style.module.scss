@@ -1,0 +1,12 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0;
+  white-space: nowrap;
+  color: #999999;
+}
