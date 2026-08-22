@@ -4,14 +4,14 @@ import Footer from './components/Footer';
 import ViewedProducts from './components/ViewedProducts';
 import ProductGallery from './components/ProductGallery';
 import ProductInfo from './components/ProductInfo';
+import Product from './components/Product';
 
 function App() {
   return (
     <div>
       <Header />
       <AppRoutes />
-      <ProductGallery />
-      <ProductInfo />
+      <Product />
       <ViewedProducts />
       <Footer />
     </div>
