@@ -1,6 +1,6 @@
-import ProductGallery from '../ProductGallery';
-import ProductInfo from '../ProductInfo';
-import ViewedProducts from '../ViewedProducts';
+import ProductGallery from '../../components/ProductGallery/index';
+import ProductInfo from '../../components/ProductInfo/index';
+import ViewedProducts from '../../components/ViewedProducts/index';
 
 import style from './style.module.scss';
 import { product } from './mock';
