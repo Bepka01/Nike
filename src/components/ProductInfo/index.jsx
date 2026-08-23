@@ -3,6 +3,7 @@ import style from './style.module.scss';
 import Button from '../ui/Button/index';
 import Typography from '../ui/Typography';
 import BreadCrumbs from '../Breadcrumbs';
+import Counter from '../Counter';
 
 const ProductInfo = ({
   price,
@@ -54,7 +55,7 @@ const ProductInfo = ({
       </div>
 
       <div className={style.counterAndTrash}>
-        <Button variant="color"> - 1 +</Button>
+        <Counter />
         <Button variant="trash">В корзину</Button>
       </div>
 
