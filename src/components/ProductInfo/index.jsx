@@ -3,7 +3,9 @@ import style from './style.module.scss';
 import Button from '../ui/Button/index';
 import Typography from '../ui/Typography';
 import BreadCrumbs from '../Breadcrumbs';
-import Counter from '../Counter';
+import Counter from '../ui/Counter';
+
+import { useState } from 'react';
 
 const ProductInfo = ({
   price,
@@ -14,6 +16,7 @@ const ProductInfo = ({
   description,
   breadCrumbs,
 }) => {
+  const [count, setCount] = useState(0);
   return (
     <div className={style.productInfoContainer}>
       <BreadCrumbs items={breadCrumbs}></BreadCrumbs>
@@ -55,7 +58,7 @@ const ProductInfo = ({
       </div>
 
       <div className={style.counterAndTrash}>
-        <Counter />
+        <Counter count={count} setCount={setCount} />
         <Button variant="trash">В корзину</Button>
       </div>
 
