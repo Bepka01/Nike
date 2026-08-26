@@ -1,20 +1,20 @@
 import style from './style.module.scss';
 
 const Counter = ({ count, setCount }) => {
-  const handlePlusCount = () => {
+  const increase = () => {
     setCount((prevCount) => prevCount + 1);
   };
 
-  const handleMinusCount = () => {
+  const decrease = () => {
     setCount((prevCount) => prevCount - 1);
   };
   return (
     <div className={style.counterContainer}>
-      <button disabled={count === 0} onClick={handleMinusCount}>
+      <button disabled={count === 0} onClick={decrease}>
         -
       </button>
       {count}
-      <button disabled={count === 15} onClick={handlePlusCount}>
+      <button disabled={count === 15} onClick={increase}>
         +
       </button>
     </div>
