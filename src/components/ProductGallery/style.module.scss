@@ -1,11 +1,10 @@
 .productGalletyContainer {
   width: 575px;
   height: 702px;
-
   display: flex;
   align-items: flex-start;
   gap: 40px;
-
+  margin: 0 auto;
   box-sizing: border-box;
 
   .smallPhoto {

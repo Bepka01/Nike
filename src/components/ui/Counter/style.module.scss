@@ -1,0 +1,11 @@
+@use '../../../styles//variables.scss' as *;
+.counterContainer {
+  max-width: 161px;
+  width: 150px;
+  display: flex;
+  padding: 19px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  border-radius: $border-radius-sm;
+}
