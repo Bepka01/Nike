@@ -32,3 +32,22 @@
   color: $light-gray;
   font-size: $font-size-lg;
 }
+.close {
+  width: 32px;
+  height: 32px;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  font-size: 32px;
+  font-weight: 300;
+  line-height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+}
