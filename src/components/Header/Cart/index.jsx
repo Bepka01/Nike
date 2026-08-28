@@ -2,12 +2,12 @@ import Icon from '../../ui/Icon';
 import style from './style.module.scss';
 import Typography from '../../ui/Typography';
 import Button from '../../ui/Button';
-import CardBasket from './CardBasket';
-import { ProductsBasket } from './CardBasket/mock';
+import CartCard from './CartCard';
+import { productsCart } from './CartCard/mock';
 import { useState, useMemo } from 'react';
 
-const Basket = ({ activeBasket, onClick }) => {
-  const [products, setProducts] = useState(ProductsBasket);
+const Card = ({ activeBasket, onClick }) => {
+  const [products, setProducts] = useState(productsCart);
 
   const totalPrice = useMemo(() => {
     return products.reduce((total, product) => {
@@ -31,9 +31,11 @@ const Basket = ({ activeBasket, onClick }) => {
 
           <Icon name="burgerClose" onClick={onClick} />
         </div>
-        <div>
-          <CardBasket products={products} setProducts={setProducts} />
+
+        <div className={style.basketContent}>
+          <CartCard products={products} setProducts={setProducts} />
         </div>
+
         <div className={style.footerBasket}>
           <Typography>Предварительный итог : {totalPrice}</Typography>
           <Button variant="basket">Оформить заказ</Button>
@@ -43,4 +45,4 @@ const Basket = ({ activeBasket, onClick }) => {
   );
 };
 
-export default Basket;
+export default Card;

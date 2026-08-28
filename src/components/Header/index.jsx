@@ -5,7 +5,7 @@ import { menu } from '../../constants.js';
 
 import style from './style.module.scss';
 import MenuItem from './MenuItem';
-import Basket from './Basket/index.jsx';
+import Card from './Cart/index.jsx';
 import BurgerMenu from './BurgerMenu/index.jsx';
 import { Link } from 'react-router-dom';
 
@@ -58,7 +58,7 @@ const Header = () => {
 
         <div className={style.headerRight}>
           <Icon name="glass" className={style.search} />
-          <Basket
+          <Card
             activeBasket={activeBasket}
             onClick={() => {
               setActiveBasket(!activeBasket);

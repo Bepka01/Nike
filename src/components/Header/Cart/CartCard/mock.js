@@ -3,7 +3,7 @@ import image2 from '../../../../assets/img/viewedCard2.png';
 import image3 from '../../../../assets/img/viewedCard3.png';
 import image4 from '../../../../assets/img/viewedCard4.png';
 
-export const ProductsBasket = [
+export const productsCart = [
   {
     id: 1,
     title: 'Nike Air Max 270 React ENG',
