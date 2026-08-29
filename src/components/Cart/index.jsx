@@ -1,7 +1,7 @@
-import Icon from '../../ui/Icon';
+import Icon from '../ui/Icon';
 import style from './style.module.scss';
-import Typography from '../../ui/Typography';
-import Button from '../../ui/Button';
+import Typography from '../ui/Typography';
+import Button from '../ui/Button';
 import CartCard from './CartCard';
 import { productsCart } from './CartCard/mock';
 import { useState, useMemo } from 'react';

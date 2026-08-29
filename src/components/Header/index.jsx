@@ -5,7 +5,7 @@ import { menu } from '../../constants.js';
 
 import style from './style.module.scss';
 import MenuItem from './MenuItem';
-import Card from './Cart/index.jsx';
+import Card from '../Cart/index.jsx';
 import BurgerMenu from './BurgerMenu/index.jsx';
 import { Link } from 'react-router-dom';
 

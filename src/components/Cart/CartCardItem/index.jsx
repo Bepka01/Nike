@@ -1,15 +1,12 @@
 import style from './style.module.scss';
-import Counter from '../../../ui/Counter';
-import Typography from '../../../ui/Typography';
-import Icon from '../../../ui/Icon';
+import Counter from '../../ui/Counter';
+import Typography from '../../ui/Typography';
+import Icon from '../../ui/Icon';
 
-const CartCardItem = ({ product, setProducts }) => {
-  const deleteProduct = (id) => {
-    setProducts((prevProducts) =>
-      prevProducts.filter((product) => product.id !== id)
-    );
-  };
+const MIN_COUNT = 0;
+const MAX_COUNT = 15;
 
+const CartCardItem = ({ product, deleteProduct, updateProductCount }) => {
   return (
     <div className={style.card}>
       <div className={style.cardPhoto}>
@@ -31,18 +28,14 @@ const CartCardItem = ({ product, setProducts }) => {
           <Counter
             className={style.counterCart}
             count={product.count}
-            setCount={(callback) => {
-              setProducts((prevProducts) =>
-                prevProducts.map((item) =>
-                  item.id === product.id
-                    ? {
-                        ...item,
-                        count: callback(item.count),
-                      }
-                    : item
-                )
-              );
-            }}
+            minCount={MIN_COUNT}
+            maxCount={MAX_COUNT}
+            increase={() =>
+              updateProductCount(product.id, (count) => count + 1)
+            }
+            decrease={() =>
+              updateProductCount(product.id, (count) => count - 1)
+            }
           />
 
           <Typography>{product.price}</Typography>
