@@ -7,6 +7,24 @@ import { productsCart } from './CartCard/mock';
 import { useState, useMemo } from 'react';
 
 const Card = ({ activeBasket, onClick }) => {
+  const deleteProduct = (id) => {
+    setProducts((prevProducts) =>
+      prevProducts.filter((product) => product.id !== id)
+    );
+  };
+
+  const updateProductCount = (id, callback) => {
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === id
+          ? {
+              ...product,
+              count: callback(product.count),
+            }
+          : product
+      )
+    );
+  };
   const [products, setProducts] = useState(productsCart);
 
   const totalPrice = useMemo(() => {
@@ -33,7 +51,11 @@ const Card = ({ activeBasket, onClick }) => {
         </div>
 
         <div className={style.basketContent}>
-          <CartCard products={products} setProducts={setProducts} />
+          <CartCard
+            updateProductCount={updateProductCount}
+            deleteProduct={deleteProduct}
+            products={products}
+          />
         </div>
 
         <div className={style.footerBasket}>
