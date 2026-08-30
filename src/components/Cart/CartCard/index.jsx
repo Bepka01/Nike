@@ -3,7 +3,6 @@ import CartCardItem from '../CartCardItem';
 
 const CartCard = ({
   products,
-
   updateProductCount,
   deleteProduct,
 }) => {
