@@ -1,9 +1,11 @@
 import style from './style.module.scss';
 import CartCardItem from '../CartCardItem';
 
-const CartCard = ({
+const CartList = ({
+  decreaseProductCount,
+  increaseProductCount,
   products,
-  updateProductCount,
+
   deleteProduct,
 }) => {
   return (
@@ -13,11 +15,12 @@ const CartCard = ({
           key={product.id}
           product={product}
           deleteProduct={deleteProduct}
-          updateProductCount={updateProductCount}
+          decreaseProductCount={() => decreaseProductCount(product.id)}
+          increaseProductCount={() => increaseProductCount(product.id)}
         />
       ))}
     </div>
   );
 };
 
-export default CartCard;
+export default CartList;

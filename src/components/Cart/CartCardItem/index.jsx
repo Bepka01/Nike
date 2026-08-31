@@ -6,7 +6,12 @@ import Icon from '../../ui/Icon';
 const MIN_COUNT = 0;
 const MAX_COUNT = 15;
 
-const CartCardItem = ({ product, deleteProduct, updateProductCount }) => {
+const CartCardItem = ({
+  product,
+  deleteProduct,
+  decreaseProductCount,
+  increaseProductCount,
+}) => {
   return (
     <div className={style.card}>
       <div className={style.cardPhoto}>
@@ -30,12 +35,8 @@ const CartCardItem = ({ product, deleteProduct, updateProductCount }) => {
             count={product.count}
             minCount={MIN_COUNT}
             maxCount={MAX_COUNT}
-            increase={() =>
-              updateProductCount(product.id, (count) => count + 1)
-            }
-            decrease={() =>
-              updateProductCount(product.id, (count) => count - 1)
-            }
+            increase={increaseProductCount}
+            decrease={decreaseProductCount}
           />
 
           <Typography>{product.price}</Typography>

@@ -2,30 +2,44 @@ import Icon from '../ui/Icon';
 import style from './style.module.scss';
 import Typography from '../ui/Typography';
 import Button from '../ui/Button';
-import CartCard from './CartCard';
-import { productsCart } from './CartCard/mock';
+import CartList from './CartList';
+import { productsCart } from './CartList/mock';
 import { useState, useMemo } from 'react';
 
 const Card = ({ activeBasket, onClick }) => {
+  const [products, setProducts] = useState(productsCart);
+
   const deleteProduct = (id) => {
     setProducts((prevProducts) =>
       prevProducts.filter((product) => product.id !== id)
     );
   };
 
-  const updateProductCount = (id, callback) => {
+  const increaseProductCount = (id) => {
     setProducts((prevProducts) =>
       prevProducts.map((product) =>
         product.id === id
           ? {
               ...product,
-              count: callback(product.count),
+              count: product.count + 1,
             }
           : product
       )
     );
   };
-  const [products, setProducts] = useState(productsCart);
+
+  const decreaseProductCount = (id) => {
+    setProducts((prevProducts) =>
+      prevProducts.map((product) =>
+        product.id === id
+          ? {
+              ...product,
+              count: product.count - 1,
+            }
+          : product
+      )
+    );
+  };
 
   const totalPrice = useMemo(() => {
     return products.reduce((total, product) => {
@@ -51,8 +65,9 @@ const Card = ({ activeBasket, onClick }) => {
         </div>
 
         <div className={style.basketContent}>
-          <CartCard
-            updateProductCount={updateProductCount}
+          <CartList
+            decreaseProductCount={decreaseProductCount}
+            increaseProductCount={increaseProductCount}
             deleteProduct={deleteProduct}
             products={products}
           />
