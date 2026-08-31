@@ -27,6 +27,7 @@ const Card = ({ activeBasket, onClick }) => {
       )
     );
   };
+  ``;
 
   const decreaseProductCount = (id) => {
     setProducts((prevProducts) =>

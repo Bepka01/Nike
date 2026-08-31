@@ -6,7 +6,7 @@ import Icon from '../../ui/Icon';
 const MIN_COUNT = 0;
 const MAX_COUNT = 15;
 
-const CartCardItem = ({
+const ProductItemCard = ({
   product,
   deleteProduct,
   decreaseProductCount,
@@ -46,4 +46,4 @@ const CartCardItem = ({
   );
 };
 
-export default CartCardItem;
+export default ProductItemCard;

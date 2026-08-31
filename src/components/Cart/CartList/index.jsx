@@ -1,5 +1,5 @@
 import style from './style.module.scss';
-import CartCardItem from '../CartCardItem';
+import ProductItemCard from '../ProductItemCard';
 
 const CartList = ({
   decreaseProductCount,
@@ -11,7 +11,7 @@ const CartList = ({
   return (
     <div className={style.cardsContainer}>
       {products.map((product) => (
-        <CartCardItem
+        <ProductItemCard
           key={product.id}
           product={product}
           deleteProduct={deleteProduct}
