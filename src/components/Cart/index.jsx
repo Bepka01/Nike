@@ -9,6 +9,12 @@ import { useState, useMemo } from 'react';
 const Card = ({ activeBasket, onClick }) => {
   const [products, setProducts] = useState(productsCart);
 
+    const totalPrice = useMemo(() => {
+    return products.reduce((total, product) => {
+      return total + Number(product.price.replace(' ₽', '')) * product.count;
+    }, 0);
+  }, [products]);
+
   const deleteProduct = (id) => {
     setProducts((prevProducts) =>
       prevProducts.filter((product) => product.id !== id)
@@ -42,11 +48,7 @@ const Card = ({ activeBasket, onClick }) => {
     );
   };
 
-  const totalPrice = useMemo(() => {
-    return products.reduce((total, product) => {
-      return total + Number(product.price.replace(' ₽', '')) * product.count;
-    }, 0);
-  }, [products]);
+
 
   return (
     <div>
