@@ -5,13 +5,14 @@ import { menu } from '../../constants.js';
 
 import style from './style.module.scss';
 import MenuItem from './MenuItem';
-
+import Card from '../Cart/index.jsx';
 import BurgerMenu from './BurgerMenu/index.jsx';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [activeMenu, setActiveMenu] = useState(null);
   const [activeBurger, setBurger] = useState(false);
+  const [activeBasket, setActiveBasket] = useState(false);
 
   const toggleMenu = (menu) => {
     if (activeMenu === menu) {
@@ -57,9 +58,12 @@ const Header = () => {
 
         <div className={style.headerRight}>
           <Icon name="glass" className={style.search} />
-          <Link to="/trash">
-            <Icon name="trash" />
-          </Link>
+          <Card
+            activeBasket={activeBasket}
+            onClick={() => {
+              setActiveBasket(!activeBasket);
+            }}
+          />
         </div>
       </header>
 

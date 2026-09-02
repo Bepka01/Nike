@@ -59,7 +59,7 @@ const ProductInfo = ({
 
       <div className={style.counterAndTrash}>
         <Counter count={count} setCount={setCount} />
-        <Button variant="trash">В корзину</Button>
+        <Button variant="basketProduct">В корзину</Button>
       </div>
 
       <div className={style.aboutProduct}>
